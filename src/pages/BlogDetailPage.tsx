@@ -47,41 +47,30 @@ export function BlogDetailPage() {
           ]}
         />
 
-        <article className="mt-6">
+        <article className="mt-4">
           {/* Header */}
-          <header className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-            {post.image && (
-              <div className="h-48 sm:h-64 bg-gray-50 overflow-hidden">
-                <img 
-                  src={post.image} 
-                  alt={lang === "hi" ? post.title.hi : post.title.en}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-            <div className="p-6 sm:p-8">
-              <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
-                {post.category}
+          <header className="bg-white rounded-lg border border-gray-200 p-5">
+            <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
+              {post.category}
+            </span>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 mt-2 mb-2">
+              {lang === "hi" ? post.title.hi : post.title.en}
+            </h1>
+            <p className="text-sm text-gray-600 mb-3">
+              {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
+            </p>
+            <div className="flex items-center gap-3 text-xs text-gray-500">
+              <span className="flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5" />
+                {post.readingTime} {t.blog.readingTime}
               </span>
-              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">
-                {lang === "hi" ? post.title.hi : post.title.en}
-              </h1>
-              <p className="text-gray-600 mb-4">
-                {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
-              </p>
-              <div className="flex items-center gap-4 text-sm text-gray-500">
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {post.readingTime} {t.blog.readingTime}
-                </span>
-                <span>{post.date}</span>
-                <span>{post.author}</span>
-              </div>
+              <span>{post.date}</span>
+              <span>{post.author}</span>
             </div>
           </header>
 
           {/* Content */}
-          <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+          <div className="mt-3 bg-white rounded-lg border border-gray-200 p-4">
             <div
               className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 prose-strong:text-gray-900"
               dangerouslySetInnerHTML={{
@@ -90,16 +79,16 @@ export function BlogDetailPage() {
             />
             
             {/* In-content ad */}
-            <AdBanner className="mt-8" />
+            <AdBanner className="mt-4" />
           </div>
 
           {/* Native ad */}
           <AdNativeBanner />
 
           {/* Important notice */}
-          <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
-            <p className="text-sm text-amber-800">{t.scheme.importantNotice}</p>
+          <div className="mt-3 bg-amber-50 border border-amber-200 rounded-lg p-3 flex items-start gap-2">
+            <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+            <p className="text-xs text-amber-800">{t.scheme.importantNotice}</p>
           </div>
 
           {/* Related Schemes */}

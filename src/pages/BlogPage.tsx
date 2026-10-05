@@ -35,63 +35,46 @@ export function BlogPage() {
         {blogPosts.length > 0 && (
           <Link
             to={`/blog/${blogPosts[0].slug}`}
-            className="block mb-8 bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group"
+            className="block mb-4 bg-white rounded-lg border border-gray-200 p-5 hover:shadow-md transition-shadow group"
           >
-            {blogPosts[0].image && (
-              <div className="h-48 sm:h-64 bg-gray-50 overflow-hidden">
-                <img 
-                  src={blogPosts[0].image} 
-                  alt={lang === "hi" ? blogPosts[0].title.hi : blogPosts[0].title.en}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            )}
-            <div className="p-6 sm:p-8">
-              <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
-                {blogPosts[0].category} • Featured
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-3 mb-3 group-hover:text-primary-700 transition-colors">
-                {lang === "hi" ? blogPosts[0].title.hi : blogPosts[0].title.en}
-              </h2>
-              <p className="text-gray-600 mb-4">
-                {lang === "hi" ? blogPosts[0].excerpt.hi : blogPosts[0].excerpt.en}
-              </p>
-              <div className="flex items-center gap-4 text-sm text-gray-500">
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {blogPosts[0].readingTime} {t.blog.readingTime}
+            <div className="flex items-start gap-3">
+              <div className="flex-1">
+                <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
+                  {blogPosts[0].category} • Featured
                 </span>
-                <span>{blogPosts[0].date}</span>
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 mt-2 mb-2 group-hover:text-primary-700 transition-colors">
+                  {lang === "hi" ? blogPosts[0].title.hi : blogPosts[0].title.en}
+                </h2>
+                <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                  {lang === "hi" ? blogPosts[0].excerpt.hi : blogPosts[0].excerpt.en}
+                </p>
+                <div className="flex items-center gap-3 text-xs text-gray-500">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5" />
+                    {blogPosts[0].readingTime} {t.blog.readingTime}
+                  </span>
+                  <span>{blogPosts[0].date}</span>
+                </div>
               </div>
             </div>
           </Link>
         )}
 
         {/* Article grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {blogPosts.slice(1).map((post) => (
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group"
+              className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow group"
             >
-              {post.image && (
-                <div className="h-40 bg-gray-50 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={lang === "hi" ? post.title.hi : post.title.en}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
-              <div className="p-6">
               <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
                 {post.category}
               </span>
-              <h3 className="text-lg font-semibold text-gray-900 mt-3 mb-2 group-hover:text-primary-700 transition-colors">
+              <h3 className="text-base font-semibold text-gray-900 mt-2 mb-1 group-hover:text-primary-700 transition-colors line-clamp-1">
                 {lang === "hi" ? post.title.hi : post.title.en}
               </h3>
-              <p className="text-sm text-gray-600 line-clamp-2 mb-4">
+              <p className="text-sm text-gray-600 line-clamp-2 mb-2">
                 {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
               </p>
               <div className="flex items-center justify-between">
@@ -102,11 +85,10 @@ export function BlogPage() {
                   </span>
                   <span>{post.date}</span>
                 </div>
-                <span className="text-sm font-medium text-primary-600 flex items-center gap-1">
+                <span className="text-xs font-medium text-primary-600 flex items-center gap-1">
                   {t.blog.readMore}
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
-              </div>
               </div>
             </Link>
           ))}
