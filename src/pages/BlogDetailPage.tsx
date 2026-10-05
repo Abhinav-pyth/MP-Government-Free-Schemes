@@ -34,7 +34,7 @@ export function BlogDetailPage() {
       title={`${lang === "hi" ? post.title.hi : post.title.en} | MP Schemes Blog`}
       description={lang === "hi" ? post.excerpt.hi : post.excerpt.en}
       keywords={`${post.category}, ${lang === "hi" ? post.title.hi : post.title.en}, सरकारी योजना, government scheme`}
-      canonical={`https://mpgovschemes.com/blog/${post.slug}`}
+      canonical={`https://mp-government-free-schemes.vercel.app/blog/${post.slug}`}
       ogType="article"
     />
     <div className="min-h-screen bg-gray-50">

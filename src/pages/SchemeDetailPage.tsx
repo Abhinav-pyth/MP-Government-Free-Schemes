@@ -48,7 +48,7 @@ export function SchemeDetailPage() {
         lang === "hi" ? scheme.name.hi : scheme.name.en,
         lang === "hi" ? scheme.category.hi : scheme.category.en,
       ].join(", ")}
-      canonical={`https://mpgovschemes.com/scheme/${scheme.id}`}
+      canonical={`https://mp-government-free-schemes.vercel.app/scheme/${scheme.id}`}
       ogType="article"
     />
     <div className="min-h-screen bg-gray-50">
