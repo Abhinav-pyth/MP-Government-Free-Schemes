@@ -12,6 +12,13 @@ export function HelpPage() {
         <Breadcrumbs items={[{ label: t.nav.help }]} />
 
         <div className="mt-6 text-center mb-8">
+          <div className="h-48 sm:h-64 bg-gray-50 rounded-xl overflow-hidden mb-6">
+            <img 
+              src="/images/help-hero.svg" 
+              alt="Help Desk"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary-100 flex items-center justify-center">
             <HelpCircle className="w-8 h-8 text-primary-600" />
           </div>

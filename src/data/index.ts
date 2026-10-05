@@ -21,6 +21,7 @@ export interface BlogPost {
   title: { hi: string; en: string };
   excerpt: { hi: string; en: string };
   content: { hi: string; en: string };
+  image?: string;
   date: string;
   readingTime: number;
   author: string;

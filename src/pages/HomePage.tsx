@@ -17,6 +17,13 @@ const categoryIcons: Record<string, React.ElementType> = {
   "health-social": HeartPulse,
 };
 
+const categoryImages: Record<string, string> = {
+  "women-child": "/images/category-women.svg",
+  education: "/images/category-education.svg",
+  agriculture: "/images/category-agriculture.svg",
+  "health-social": "/images/category-health.svg",
+};
+
 export function HomePage() {
   const { lang, t } = useLanguage();
   const navigate = useNavigate();
@@ -64,8 +71,16 @@ export function HomePage() {
     />
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+      <section 
+        className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white relative overflow-hidden"
+        style={{
+          backgroundImage: 'url(/images/hero-bg.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundBlendMode: 'overlay'
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               {t.hero.title}
@@ -82,7 +97,7 @@ export function HomePage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={t.hero.searchPlaceholder}
-                className="w-full pl-12 pr-4 py-4 rounded-xl text-gray-900 text-base shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-300"
+                className="w-full pl-12 pr-4 py-4 rounded-xl bg-white text-gray-900 text-base shadow-lg focus:outline-none focus:ring-4 focus:ring-primary-300 placeholder-gray-500"
                 aria-label={t.hero.searchPlaceholder}
               />
               <button
@@ -150,19 +165,31 @@ export function HomePage() {
             {categories.map((cat) => {
               const Icon = categoryIcons[cat.key] || FileText;
               const count = schemes.filter(s => s.category.key === cat.key).length;
+              const categoryImage = categoryImages[cat.key];
               return (
                 <Link
                   key={cat.key}
                   to={`/schemes?category=${cat.key}`}
-                  className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md hover:border-primary-200 transition-all group"
+                  className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md hover:border-primary-200 transition-all group"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center mb-4 group-hover:bg-primary-100 transition-colors">
-                    <Icon className="w-6 h-6 text-primary-600" />
+                  <div className="h-32 bg-gray-50 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={categoryImage} 
+                      alt={lang === "hi" ? cat.hi : cat.en}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-1">
-                    {lang === "hi" ? cat.hi : cat.en}
-                  </h3>
-                  <p className="text-sm text-gray-500">{count} {lang === "hi" ? "योजनाएं" : "schemes"}</p>
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center">
+                        <Icon className="w-4 h-4 text-primary-600" />
+                      </div>
+                      <h3 className="font-semibold text-gray-900 text-sm">
+                        {lang === "hi" ? cat.hi : cat.en}
+                      </h3>
+                    </div>
+                    <p className="text-xs text-gray-500">{count} {lang === "hi" ? "योजनाएं" : "schemes"}</p>
+                  </div>
                 </Link>
               );
             })}

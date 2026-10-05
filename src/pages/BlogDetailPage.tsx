@@ -48,23 +48,34 @@ export function BlogDetailPage() {
 
         <article className="mt-6">
           {/* Header */}
-          <header className="bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
-            <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
-              {post.category}
-            </span>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">
-              {lang === "hi" ? post.title.hi : post.title.en}
-            </h1>
-            <p className="text-gray-600 mb-4">
-              {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
-            </p>
-            <div className="flex items-center gap-4 text-sm text-gray-500">
-              <span className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
-                {post.readingTime} {t.blog.readingTime}
+          <header className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+            {post.image && (
+              <div className="h-48 sm:h-64 bg-gray-50 overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={lang === "hi" ? post.title.hi : post.title.en}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <div className="p-6 sm:p-8">
+              <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
+                {post.category}
               </span>
-              <span>{post.date}</span>
-              <span>{post.author}</span>
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-3 mb-4">
+                {lang === "hi" ? post.title.hi : post.title.en}
+              </h1>
+              <p className="text-gray-600 mb-4">
+                {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
+              </p>
+              <div className="flex items-center gap-4 text-sm text-gray-500">
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4" />
+                  {post.readingTime} {t.blog.readingTime}
+                </span>
+                <span>{post.date}</span>
+                <span>{post.author}</span>
+              </div>
             </div>
           </header>
 

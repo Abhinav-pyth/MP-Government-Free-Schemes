@@ -9,7 +9,15 @@ export function AboutPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumbs items={[{ label: t.nav.about }]} />
 
-        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
+      <div className="mt-6 bg-white rounded-xl border border-gray-200 overflow-hidden">
+        <div className="h-48 sm:h-64 bg-gray-50 overflow-hidden">
+          <img 
+            src="/images/about-hero.svg" 
+            alt="About Us"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="p-6 sm:p-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">{t.about.title}</h1>
 
           <div className="prose prose-gray max-w-none">
@@ -23,7 +31,7 @@ export function AboutPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div>      </div>
     </div>
   );
 }

@@ -37,6 +37,15 @@ export function BlogPage() {
             to={`/blog/${blogPosts[0].slug}`}
             className="block mb-8 bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow group"
           >
+            {blogPosts[0].image && (
+              <div className="h-48 sm:h-64 bg-gray-50 overflow-hidden">
+                <img 
+                  src={blogPosts[0].image} 
+                  alt={lang === "hi" ? blogPosts[0].title.hi : blogPosts[0].title.en}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+            )}
             <div className="p-6 sm:p-8">
               <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
                 {blogPosts[0].category} • Featured
@@ -64,8 +73,18 @@ export function BlogPage() {
             <Link
               key={post.slug}
               to={`/blog/${post.slug}`}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow group"
+              className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group"
             >
+              {post.image && (
+                <div className="h-40 bg-gray-50 overflow-hidden">
+                  <img 
+                    src={post.image} 
+                    alt={lang === "hi" ? post.title.hi : post.title.en}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              )}
+              <div className="p-6">
               <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
                 {post.category}
               </span>
@@ -87,6 +106,7 @@ export function BlogPage() {
                   {t.blog.readMore}
                   <ArrowRight className="w-3.5 h-3.5" />
                 </span>
+              </div>
               </div>
             </Link>
           ))}

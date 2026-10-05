@@ -11,6 +11,7 @@ export const blogPosts: BlogPost[] = [
       hi: "Samagra e-KYC प्रक्रिया को ऑनलाइन पूरा करने का चरण-दर-चरण मार्गदर्शन। जानिए आवश्यक दस्तावेज, सामान्य समस्याएं और समाधान।",
       en: "Step-by-step guide to completing the Samagra e-KYC process online. Learn about required documents, common problems, and solutions.",
     },
+    image: "/images/blog-samagra.svg",
     content: {
       hi: `<h2>Samagra e-KYC क्या है?</h2>
 <p>Samagra e-KYC मध्य प्रदेश सरकार की एक डिजिटल पहचान सत्यापन प्रक्रिया है जो नागरिकों की पहचान को उनके समग्र आईडी से जोड़ती है। यह विभिन्न सरकारी योजनाओं के लाभ प्राप्त करने के लिए आवश्यक है।</p>
@@ -97,6 +98,7 @@ export const blogPosts: BlogPost[] = [
       hi: "DBT स्टेटस चेक करने, बैंक अकाउंट मैपिंग, आधार लिंकिंग और भुगतान न मिलने की स्थिति में क्या करें - पूरी जानकारी।",
       en: "Complete information on checking DBT status, bank account mapping, Aadhaar linking, and what to do if payment is not received.",
     },
+    image: "/images/blog-dbt.svg",
     content: {
       hi: `<h2>DBT क्या है?</h2>
 <p>DBT (Direct Benefit Transfer) एक ऐसी प्रणाली है जिसके माध्यम से सरकार सीधे लाभार्थी के बैंक खाते में धनराशि भेजती है। इससे बिचौलियों की समस्या समाप्त होती है और लाभ सीधे नागरिक तक पहुंचता है।</p>
