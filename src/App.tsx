@@ -10,6 +10,7 @@ import { BlogDetailPage } from "./pages/BlogDetailPage";
 import { HelpPage } from "./pages/HelpPage";
 import { AboutPage } from "./pages/AboutPage";
 import { PrivacyPage, TermsPage, DisclaimerPage } from "./pages/StaticPages";
+import { AdLeaderboard, AdMobileBanner, AdWideSkyscraper, AdPopunder, AdSocialBar } from "./components/ads/AdUnits";
 
 function ScrollToTop() {
   return null;
@@ -20,9 +21,19 @@ export default function App() {
     <BrowserRouter>
       <LanguageProvider>
         <ScrollToTop />
+        {/* Invisible ad scripts */}
+        <AdPopunder />
+        <AdSocialBar />
+        
         <div className="min-h-screen flex flex-col bg-gray-50">
           <Header />
-          <main className="flex-1">
+          {/* Leaderboard ad below header (desktop only) */}
+          <AdLeaderboard />
+          
+          {/* Wide skyscraper on right side (large desktop only) */}
+          <AdWideSkyscraper />
+          
+          <main className="flex-1 pb-16 lg:pb-0">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/schemes" element={<SchemesPage />} />
@@ -38,6 +49,9 @@ export default function App() {
             </Routes>
           </main>
           <Footer />
+          
+          {/* Mobile sticky bottom banner */}
+          <AdMobileBanner />
         </div>
       </LanguageProvider>
     </BrowserRouter>

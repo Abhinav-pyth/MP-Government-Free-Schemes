@@ -11,6 +11,7 @@ import { Breadcrumbs } from "../components/common/Breadcrumbs";
 import { OfficialLink } from "../components/common/OfficialLink";
 import { cn } from "../lib/utils";
 import { SEO } from "../components/SEO";
+import { AdBanner, AdNativeBanner } from "../components/ads/AdUnits";
 
 const iconMap: Record<string, React.ElementType> = {
   Heart, Baby, GraduationCap, Briefcase, Tractor, HeartPulse, ShieldCheck, MapPin,
@@ -128,6 +129,9 @@ export function SchemeDetailPage() {
           <p className="text-sm text-amber-800">{t.scheme.importantNotice}</p>
         </div>
 
+        {/* In-content ad */}
+        <AdBanner className="mt-6" />
+
         {/* Tabs */}
         <div className="mt-6 bg-white rounded-xl border border-gray-200 overflow-hidden">
           <div className="border-b border-gray-200 overflow-x-auto">
@@ -239,6 +243,9 @@ export function SchemeDetailPage() {
             )}
           </div>
         </div>
+
+        {/* Native ad after content */}
+        <AdNativeBanner />
 
         {/* Disclaimer */}
         <div className="mt-6 p-4 rounded-xl bg-gray-100 border border-gray-200">

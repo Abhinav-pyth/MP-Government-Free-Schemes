@@ -69,4 +69,24 @@
     color: #111827;
     font-weight: 600;
   }
+  
+  /* Ad unit styles */
+  .ad-unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+  }
+  
+  .ad-unit iframe {
+    max-width: 100%;
+    border: none;
+  }
+  
+  /* Extra extra large breakpoint for skyscraper */
+  @media (min-width: 1536px) {
+    .xxl\:block {
+      display: block;
+    }
+  }
 }

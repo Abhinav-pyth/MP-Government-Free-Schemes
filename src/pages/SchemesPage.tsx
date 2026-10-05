@@ -6,6 +6,7 @@ import { SchemeGrid } from "../components/schemes/SchemeCard";
 import { FilterPanel } from "../components/schemes/FilterPanel";
 import { Breadcrumbs } from "../components/common/Breadcrumbs";
 import { SEO } from "../components/SEO";
+import { AdMediumRect } from "../components/ads/AdUnits";
 
 export function SchemesPage() {
   const { lang, t } = useLanguage();
@@ -97,6 +98,13 @@ export function SchemesPage() {
           <div className="flex-1 min-w-0">
             <SchemeGrid schemes={filteredSchemes} />
           </div>
+
+          {/* Right sidebar ad (desktop only) */}
+          <aside className="hidden xl:block w-[300px] shrink-0">
+            <div className="sticky top-20 space-y-4">
+              <AdMediumRect />
+            </div>
+          </aside>
         </div>
       </div>
     </div>
