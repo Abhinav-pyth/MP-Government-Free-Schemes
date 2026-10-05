@@ -69,33 +69,52 @@ create index idx_user_queries_category on user_queries(category);
 
 ### Row Level Security (RLS)
 
-Enable RLS and create policies to allow anonymous inserts while preventing unauthorized reads:
+Enable RLS and create policies to allow anonymous inserts while preventing unauthorized reads. **Important:** RLS policies only filter rows — you must also GRANT table-level permissions to the `anon` role.
 
 ```sql
 -- Enable RLS
 alter table user_queries enable row level security;
 
--- Allow anonymous inserts (for help desk form submissions)
+-- Grant table-level permissions to the anon role
+-- This is REQUIRED — RLS policies alone are not enough
+grant usage on schema public to anon;
+grant insert on user_queries to anon;
+grant select on user_queries to authenticated;
+grant update on user_queries to authenticated;
+
+-- RLS policy: allow anonymous inserts (for help desk form submissions)
 create policy "Allow anonymous inserts"
   on user_queries
   for insert
   to anon
   with check (true);
 
--- Only authenticated users (admin) can read queries
+-- RLS policy: only authenticated users (admin) can read queries
 create policy "Allow authenticated read"
   on user_queries
   for select
   to authenticated
   using (true);
 
--- Only authenticated users (admin) can update queries
+-- RLS policy: only authenticated users (admin) can update queries
 create policy "Allow authenticated updates"
   on user_queries
   for update
   to authenticated
   using (true)
   with check (true);
+```
+
+**If you still get a 42501 error**, run this to verify permissions:
+
+```sql
+-- Check what permissions anon has
+SELECT grantee, privilege_type
+FROM information_schema.role_table_grants
+WHERE table_name = 'user_queries';
+
+-- If INSERT is missing for anon, re-run:
+grant insert on user_queries to anon;
 ```
 
 ## Local Development
