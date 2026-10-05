@@ -1,1 +1,72 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #1e40af;
+  --color-primary-600: #1e3a8a;
+  --color-primary-700: #1e3370;
+  --color-primary-800: #172554;
+  --color-primary-900: #0f172a;
+  --color-accent-50: #f0fdf4;
+  --color-accent-100: #dcfce7;
+  --color-accent-200: #bbf7d0;
+  --color-accent-300: #86efac;
+  --color-accent-400: #4ade80;
+  --color-accent-500: #16a34a;
+  --color-accent-600: #15803d;
+  --color-accent-700: #166534;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  *:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .prose h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose p {
+    color: #4b5563;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .prose ul, .prose ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose ul {
+    list-style-type: disc;
+  }
+  .prose ol {
+    list-style-type: decimal;
+  }
+  .prose li {
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  .prose strong {
+    color: #111827;
+    font-weight: 600;
+  }
+}
