@@ -22,7 +22,7 @@ export function BlogPage() {
         ? "सरकारी योजना ब्लॉग, योजना मार्गदर्शिका, एमपी योजना जानकारी"
         : "government schemes blog, scheme guide, MP schemes information"
       }
-      canonical="https://mpgovschemes.com/blog"
+      canonical="https://mp-government-free-schemes.vercel.app/blog"
     />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

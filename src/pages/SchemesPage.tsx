@@ -72,7 +72,7 @@ export function SchemesPage() {
         ? "सरकारी योजनाएं खोजें, योजना फ़िल्टर, एमपी योजनाएं, सभी योजनाएं"
         : "search government schemes, scheme filter, MP schemes, all schemes"
       }
-      canonical="https://mpgovschemes.com/schemes"
+      canonical="https://mp-government-free-schemes.vercel.app/schemes"
     />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">

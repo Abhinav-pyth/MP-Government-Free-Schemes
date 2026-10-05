@@ -60,7 +60,7 @@ export function HomePage() {
         ? "मध्य प्रदेश सरकारी योजनाएं, एमपी सरकार योजना, लाड़ली बहना, किसान कल्याण, छात्रवृत्ति, सरकारी योजना"
         : "MP government schemes, Madhya Pradesh schemes, Ladli Bahna, Kisan Kalyan, scholarship, government schemes"
       }
-      canonical="https://mpgovschemes.com/"
+      canonical="https://mp-government-free-schemes.vercel.app/"
     />
     <div className="min-h-screen">
       {/* Hero Section */}
