@@ -5,6 +5,7 @@ import { blogPosts, schemes } from "../data";
 import { Breadcrumbs } from "../components/common/Breadcrumbs";
 import { OfficialLink } from "../components/common/OfficialLink";
 import { SEO } from "../components/SEO";
+import { AdBanner, AdNativeBanner } from "../components/ads/AdUnits";
 
 export function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -87,7 +88,13 @@ export function BlogDetailPage() {
                 __html: lang === "hi" ? post.content.hi : post.content.en,
               }}
             />
+            
+            {/* In-content ad */}
+            <AdBanner className="mt-8" />
           </div>
+
+          {/* Native ad */}
+          <AdNativeBanner />
 
           {/* Important notice */}
           <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
