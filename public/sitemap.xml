@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Pages -->
+  <url>
+    <loc>https://mpgovschemes.com/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/schemes</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/schemes?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/schemes?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/blog</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/blog?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/blog?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/help</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/help?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/help?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/about</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/about?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/about?lang=en" />
+  </url>
+  
+  <!-- Scheme Pages -->
+  <url>
+    <loc>https://mpgovschemes.com/scheme/ladli-bahna</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/ladli-bahna?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/ladli-bahna?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/ladli-laxmi</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/ladli-laxmi?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/ladli-laxmi?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/kanya-vivah</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/kanya-vivah?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/kanya-vivah?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/medhavi-vidyarthi</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/medhavi-vidyarthi?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/medhavi-vidyarthi?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/gaon-ki-beti</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/gaon-ki-beti?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/gaon-ki-beti?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/cycle-laptop-scooty</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/cycle-laptop-scooty?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/cycle-laptop-scooty?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/seekho-kamao</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/seekho-kamao?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/seekho-kamao?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/kisan-kalyan</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/kisan-kalyan?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/kisan-kalyan?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/free-electricity-farmers</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/free-electricity-farmers?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/free-electricity-farmers?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/krishi-yantra-subsidy</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/krishi-yantra-subsidy?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/krishi-yantra-subsidy?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/sambal-welfare</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/sambal-welfare?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/sambal-welfare?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/teerth-darshan</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/teerth-darshan?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/teerth-darshan?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/scheme/free-dialysis</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/scheme/free-dialysis?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/scheme/free-dialysis?lang=en" />
+  </url>
+  
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://mpgovschemes.com/blog/how-to-link-samagra-aadhaar</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/blog/how-to-link-samagra-aadhaar?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/blog/how-to-link-samagra-aadhaar?lang=en" />
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/blog/tracking-dbt-status</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://mpgovschemes.com/blog/tracking-dbt-status?lang=hi" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mpgovschemes.com/blog/tracking-dbt-status?lang=en" />
+  </url>
+  
+  <!-- Static Pages -->
+  <url>
+    <loc>https://mpgovschemes.com/privacy</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/terms</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://mpgovschemes.com/disclaimer</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>

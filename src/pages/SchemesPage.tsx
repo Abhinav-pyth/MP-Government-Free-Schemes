@@ -5,6 +5,7 @@ import { schemes } from "../data";
 import { SchemeGrid } from "../components/schemes/SchemeCard";
 import { FilterPanel } from "../components/schemes/FilterPanel";
 import { Breadcrumbs } from "../components/common/Breadcrumbs";
+import { SEO } from "../components/SEO";
 
 export function SchemesPage() {
   const { lang, t } = useLanguage();
@@ -57,6 +58,22 @@ export function SchemesPage() {
   };
 
   return (
+    <>
+    <SEO 
+      title={lang === "hi" 
+        ? "सभी सरकारी योजनाएं | MP Government Schemes Directory" 
+        : "All Government Schemes | MP Schemes Directory"
+      }
+      description={lang === "hi"
+        ? "मध्य प्रदेश की सभी सरकारी योजनाओं को खोजें और फ़िल्टर करें। महिला, छात्र, किसान और श्रमिक योजनाओं की पूरी जानकारी।"
+        : "Search and filter all Madhya Pradesh government schemes. Complete information on women, student, farmer and worker schemes."
+      }
+      keywords={lang === "hi"
+        ? "सरकारी योजनाएं खोजें, योजना फ़िल्टर, एमपी योजनाएं, सभी योजनाएं"
+        : "search government schemes, scheme filter, MP schemes, all schemes"
+      }
+      canonical="https://mpgovschemes.com/schemes"
+    />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Breadcrumbs items={[{ label: t.nav.schemes }]} />
@@ -83,5 +100,6 @@ export function SchemesPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

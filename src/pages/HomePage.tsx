@@ -8,6 +8,7 @@ import {
 import { useLanguage } from "../lib/i18n";
 import { schemes, categories, audiences, blogPosts } from "../data";
 import { HelpDeskForm } from "../components/help/HelpDeskForm";
+import { SEO } from "../components/SEO";
 
 const categoryIcons: Record<string, React.ElementType> = {
   "women-child": Heart,
@@ -45,6 +46,22 @@ export function HomePage() {
   };
 
   return (
+    <>
+    <SEO 
+      title={lang === "hi" 
+        ? "मध्य प्रदेश सरकारी योजनाएं | MP Government Free Schemes" 
+        : "MP Government Schemes | Free Government Schemes in Madhya Pradesh"
+      }
+      description={lang === "hi"
+        ? "मध्य प्रदेश की सरकारी योजनाओं की जानकारी, पात्रता, आवश्यक दस्तावेज, आवेदन प्रक्रिया और आधिकारिक पोर्टल एक ही जगह।"
+        : "Find Madhya Pradesh government schemes, eligibility, documents, benefits, application process and official links."
+      }
+      keywords={lang === "hi"
+        ? "मध्य प्रदेश सरकारी योजनाएं, एमपी सरकार योजना, लाड़ली बहना, किसान कल्याण, छात्रवृत्ति, सरकारी योजना"
+        : "MP government schemes, Madhya Pradesh schemes, Ladli Bahna, Kisan Kalyan, scholarship, government schemes"
+      }
+      canonical="https://mpgovschemes.com/"
+    />
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white">
@@ -276,5 +293,6 @@ export function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
