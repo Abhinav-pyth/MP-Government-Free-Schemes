@@ -54,6 +54,18 @@ export function Footer() {
               <li><Link to="/disclaimer" className="text-sm text-gray-400 hover:text-white transition-colors">{t.footer.disclaimer}</Link></li>
             </ul>
           </div>
+
+          {/* Our Other Projects */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">{lang === "hi" ? "हमारी अन्य वेबसाइट" : "Our Other Websites"}</h3>
+            <ul className="space-y-2">
+              <li><a href="https://mp-ladli-behna-yojana.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">MP Ladli Behna Yojana</a></li>
+              <li><a href="https://mp-sugam-parivahan.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">MP Sugam Parivahan</a></li>
+              <li><a href="https://doll-game-eta.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">Doll Game</a></li>
+              <li><a href="https://yaad-mantra.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">Yaad Mantra</a></li>
+              <li><a href="https://game-puzzle-tawny.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors">Puzzle Game</a></li>
+            </ul>
+          </div>
         </div>
 
         {/* Disclaimer */}
@@ -61,8 +73,13 @@ export function Footer() {
           <p className="text-xs text-gray-500 leading-relaxed mb-4">
             {t.footer.disclaimerText}
           </p>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-500 mb-2">
             {t.footer.copyright}
+          </p>
+          <p className="text-xs text-gray-500">
+            {lang === "hi" 
+              ? "विकास द्वारा: निस्या टेक्नोलॉजी, इंदौर" 
+              : "Developed by: Nisya Technology, Indore"}
           </p>
         </div>
       </div>
