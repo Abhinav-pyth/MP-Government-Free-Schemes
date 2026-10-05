@@ -2,11 +2,28 @@ import { Link } from "react-router-dom";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 import { useLanguage } from "../lib/i18n";
 import { blogPosts } from "../data";
+import { SEO } from "../components/SEO";
 
 export function BlogPage() {
   const { lang, t } = useLanguage();
 
   return (
+    <>
+    <SEO 
+      title={lang === "hi" 
+        ? "ब्लॉग और मार्गदर्शिका | MP Government Schemes" 
+        : "Blog & Guides | MP Government Schemes"
+      }
+      description={lang === "hi"
+        ? "सरकारी योजनाओं से संबंधित उपयोगी जानकारी और मार्गदर्शिका पढ़ें।"
+        : "Read useful information and guides related to government schemes."
+      }
+      keywords={lang === "hi"
+        ? "सरकारी योजना ब्लॉग, योजना मार्गदर्शिका, एमपी योजना जानकारी"
+        : "government schemes blog, scheme guide, MP schemes information"
+      }
+      canonical="https://mpgovschemes.com/blog"
+    />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
@@ -76,5 +93,6 @@ export function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -10,6 +10,7 @@ import { schemes, categories, audiences } from "../data";
 import { Breadcrumbs } from "../components/common/Breadcrumbs";
 import { OfficialLink } from "../components/common/OfficialLink";
 import { cn } from "../lib/utils";
+import { SEO } from "../components/SEO";
 
 const iconMap: Record<string, React.ElementType> = {
   Heart, Baby, GraduationCap, Briefcase, Tractor, HeartPulse, ShieldCheck, MapPin,
@@ -38,6 +39,18 @@ export function SchemeDetailPage() {
   const tabs = [t.scheme.overview, t.scheme.eligibility, t.scheme.documents, t.scheme.application];
 
   return (
+    <>
+    <SEO 
+      title={`${lang === "hi" ? scheme.name.hi : scheme.name.en} | MP Government Schemes`}
+      description={lang === "hi" ? scheme.overview.hi : scheme.overview.en}
+      keywords={[
+        ...(lang === "hi" ? scheme.keywords.hi : scheme.keywords.en),
+        lang === "hi" ? scheme.name.hi : scheme.name.en,
+        lang === "hi" ? scheme.category.hi : scheme.category.en,
+      ].join(", ")}
+      canonical={`https://mpgovschemes.com/scheme/${scheme.id}`}
+      ogType="article"
+    />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         {/* Breadcrumb */}
@@ -220,5 +233,6 @@ export function SchemeDetailPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -4,6 +4,7 @@ import { useLanguage } from "../lib/i18n";
 import { blogPosts, schemes } from "../data";
 import { Breadcrumbs } from "../components/common/Breadcrumbs";
 import { OfficialLink } from "../components/common/OfficialLink";
+import { SEO } from "../components/SEO";
 
 export function BlogDetailPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -28,6 +29,14 @@ export function BlogDetailPage() {
   const relatedArticles = blogPosts.filter((p) => p.slug !== slug);
 
   return (
+    <>
+    <SEO 
+      title={`${lang === "hi" ? post.title.hi : post.title.en} | MP Schemes Blog`}
+      description={lang === "hi" ? post.excerpt.hi : post.excerpt.en}
+      keywords={`${post.category}, ${lang === "hi" ? post.title.hi : post.title.en}, सरकारी योजना, government scheme`}
+      canonical={`https://mpgovschemes.com/blog/${post.slug}`}
+      ogType="article"
+    />
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Breadcrumbs
@@ -142,5 +151,6 @@ export function BlogDetailPage() {
         </article>
       </div>
     </div>
+    </>
   );
 }
