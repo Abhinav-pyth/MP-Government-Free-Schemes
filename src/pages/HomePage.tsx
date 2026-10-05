@@ -17,13 +17,6 @@ const categoryIcons: Record<string, React.ElementType> = {
   "health-social": HeartPulse,
 };
 
-const categoryImages: Record<string, string> = {
-  "women-child": "/images/category-women.svg",
-  education: "/images/category-education.svg",
-  agriculture: "/images/category-agriculture.svg",
-  "health-social": "/images/category-health.svg",
-};
-
 export function HomePage() {
   const { lang, t } = useLanguage();
   const navigate = useNavigate();
@@ -71,16 +64,8 @@ export function HomePage() {
     />
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section 
-        className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white relative overflow-hidden"
-        style={{
-          backgroundImage: 'url(/images/hero-bg.svg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'overlay'
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
+      <section className="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               {t.hero.title}
@@ -158,37 +143,29 @@ export function HomePage() {
       </section>
 
       {/* Category Explorer */}
-      <section className="bg-gray-50 py-12 sm:py-16">
+      <section className="bg-gray-50 py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">{t.home.categories}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">{t.home.categories}</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {categories.map((cat) => {
               const Icon = categoryIcons[cat.key] || FileText;
               const count = schemes.filter(s => s.category.key === cat.key).length;
-              const categoryImage = categoryImages[cat.key];
               return (
                 <Link
                   key={cat.key}
                   to={`/schemes?category=${cat.key}`}
-                  className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-md hover:border-primary-200 transition-all group"
+                  className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md hover:border-primary-200 transition-all group"
                 >
-                  <div className="h-32 bg-gray-50 flex items-center justify-center overflow-hidden">
-                    <img 
-                      src={categoryImage} 
-                      alt={lang === "hi" ? cat.hi : cat.en}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center">
-                        <Icon className="w-4 h-4 text-primary-600" />
-                      </div>
-                      <h3 className="font-semibold text-gray-900 text-sm">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center shrink-0 group-hover:bg-primary-100 transition-colors">
+                      <Icon className="w-5 h-5 text-primary-600" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="font-semibold text-gray-900 text-sm truncate">
                         {lang === "hi" ? cat.hi : cat.en}
                       </h3>
+                      <p className="text-xs text-gray-500 mt-0.5">{count} {lang === "hi" ? "योजनाएं" : "schemes"}</p>
                     </div>
-                    <p className="text-xs text-gray-500">{count} {lang === "hi" ? "योजनाएं" : "schemes"}</p>
                   </div>
                 </Link>
               );
@@ -198,10 +175,10 @@ export function HomePage() {
       </section>
 
       {/* Popular Schemes */}
-      <section className="py-12 sm:py-16">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">{t.home.popularSchemes}</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{t.home.popularSchemes}</h2>
             <Link
               to="/schemes"
               className="text-sm font-medium text-primary-600 hover:text-primary-700 flex items-center gap-1"
@@ -237,10 +214,10 @@ export function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-gray-50 py-12 sm:py-16">
+      <section className="bg-gray-50 py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">{t.home.howItWorks}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">{t.home.howItWorks}</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: Search, ...t.home.steps.search },
               { icon: CheckCircle, ...t.home.steps.eligibility },
@@ -263,32 +240,32 @@ export function HomePage() {
       </section>
 
       {/* Latest Articles */}
-      <section className="py-12 sm:py-16">
+      <section className="py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-gray-900">{t.home.latestArticles}</h2>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">{t.home.latestArticles}</h2>
             <Link to="/blog" className="text-sm font-medium text-primary-600 hover:text-primary-700 flex items-center gap-1">
               {lang === "hi" ? "सभी लेख" : "All Articles"}
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {blogPosts.map((post) => (
               <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
-                className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-all group"
+                className="bg-white rounded-lg border border-gray-200 p-4 hover:shadow-md transition-all group"
               >
                 <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-0.5 rounded-full">
                   {post.category}
                 </span>
-                <h3 className="text-lg font-semibold text-gray-900 mt-3 mb-2 group-hover:text-primary-700 transition-colors">
+                <h3 className="text-base font-semibold text-gray-900 mt-2 mb-1 group-hover:text-primary-700 transition-colors line-clamp-1">
                   {lang === "hi" ? post.title.hi : post.title.en}
                 </h3>
                 <p className="text-sm text-gray-600 line-clamp-2">
                   {lang === "hi" ? post.excerpt.hi : post.excerpt.en}
                 </p>
-                <p className="text-xs text-gray-400 mt-3">
+                <p className="text-xs text-gray-400 mt-2">
                   {post.readingTime} {t.blog.readingTime} • {post.date}
                 </p>
               </Link>
@@ -298,14 +275,14 @@ export function HomePage() {
       </section>
 
       {/* Help Desk CTA */}
-      <section className="bg-primary-50 py-12 sm:py-16">
+      <section className="bg-primary-50 py-8 sm:py-12">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <HelpCircle className="w-12 h-12 text-primary-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.help.title}</h2>
-            <p className="text-gray-600">{t.help.subtitle}</p>
+          <div className="text-center mb-4">
+            <HelpCircle className="w-10 h-10 text-primary-600 mx-auto mb-2" />
+            <h2 className="text-xl font-bold text-gray-900 mb-1">{t.help.title}</h2>
+            <p className="text-sm text-gray-600">{t.help.subtitle}</p>
           </div>
-          <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <div className="bg-white rounded-lg border border-gray-200 p-4">
             <HelpDeskForm compact />
           </div>
         </div>

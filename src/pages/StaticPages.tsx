@@ -6,10 +6,10 @@ export function PrivacyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Breadcrumbs items={[{ label: lang === "hi" ? "गोपनीयता नीति" : "Privacy Policy" }]} />
-        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">
+        <div className="mt-3 bg-white rounded-lg border border-gray-200 p-4">
+          <h1 className="text-xl font-bold text-gray-900 mb-3">
             {lang === "hi" ? "गोपनीयता नीति" : "Privacy Policy"}
           </h1>
           <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
@@ -54,10 +54,10 @@ export function TermsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Breadcrumbs items={[{ label: lang === "hi" ? "नियम एवं शर्तें" : "Terms & Conditions" }]} />
-        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">
+        <div className="mt-3 bg-white rounded-lg border border-gray-200 p-4">
+          <h1 className="text-xl font-bold text-gray-900 mb-3">
             {lang === "hi" ? "नियम एवं शर्तें" : "Terms & Conditions"}
           </h1>
           <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
@@ -102,10 +102,10 @@ export function DisclaimerPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <Breadcrumbs items={[{ label: lang === "hi" ? "अस्वीकरण" : "Disclaimer" }]} />
-        <div className="mt-6 bg-white rounded-xl border border-gray-200 p-6 sm:p-8">
-          <h1 className="text-2xl font-bold text-gray-900 mb-6">
+        <div className="mt-3 bg-white rounded-lg border border-gray-200 p-4">
+          <h1 className="text-xl font-bold text-gray-900 mb-3">
             {lang === "hi" ? "अस्वीकरण" : "Disclaimer"}
           </h1>
           <div className="prose prose-gray max-w-none text-gray-600 space-y-4">
