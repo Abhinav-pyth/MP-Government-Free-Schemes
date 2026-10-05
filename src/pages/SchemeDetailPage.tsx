@@ -98,6 +98,22 @@ export function SchemeDetailPage() {
                 </p>
               </div>
 
+              {/* Quick Stats */}
+              <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div className="bg-blue-50 rounded-lg p-3 text-center">
+                  <p className="text-xs text-gray-500">{t.scheme.requiredDocs}</p>
+                  <p className="text-lg font-bold text-blue-700">{scheme.documents[lang].length}</p>
+                </div>
+                <div className="bg-green-50 rounded-lg p-3 text-center">
+                  <p className="text-xs text-gray-500">{t.scheme.benefits}</p>
+                  <p className="text-lg font-bold text-green-700">{scheme.benefits[lang].length}</p>
+                </div>
+                <div className="bg-purple-50 rounded-lg p-3 text-center col-span-2 sm:col-span-1">
+                  <p className="text-xs text-gray-500">{t.scheme.application}</p>
+                  <p className="text-lg font-bold text-purple-700">{scheme.applicationProcess[lang].length} {lang === "hi" ? "चरण" : "Steps"}</p>
+                </div>
+              </div>
+
               {/* Official link */}
               <div className="mt-4">
                 <OfficialLink url={scheme.officialLink} />
